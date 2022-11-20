@@ -1,0 +1,55 @@
+.faq-list {
+  grid-column: 2/-1;
+}
+.faq dt::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background-color: #f4ba53;
+}
+.faq dt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e54;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.faq dt::after {
+  content: "⤵	";
+}
+
+.faq dd {
+  font-family: helvetica, arial;
+  line-height: 1.4;
+  margin-left: calc(15px + 10px);
+  display: block;
+  transition: display 0.3s ease-in-out;
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+
+.js .js-accordion .activate::after {
+  content: "⤴";
+}
+
+.js .js-accordion .activate + dd {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,23 @@
+.contact {
+  padding-block: 50px;
+}
+.map {
+  grid-column: 2;
+}
+.contact-list {
+  display: flex;
+  flex-direction: column;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+}
+.contact-list li::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background-color: #f4ba53;
+}
