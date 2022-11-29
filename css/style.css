@@ -1,5 +1,11 @@
-@import url("./global.css");
-@import url("./home/header.css");
+@import url("./global/global.css");
+@import url("./global/effects.css");
+@import url("./global/mobile-menu.css");
+@import url("./global/header.css");
 @import url("./home/animals.css");
 @import url("./home/faq.css");
+@import url("./home/numbers.css");
 @import url("./home/contact.css");
+@import url("./others/modal.css");
+@import url("./others/tooltip.css");
+@import url("./others/dropdown-menu.css");

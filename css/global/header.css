@@ -1,0 +1,32 @@
+.header-bg {
+  margin-block: 2rem;
+  grid-column: 3/-1;
+  background-color: #f4ba53;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+.menu a {
+  text-transform: uppercase;
+  padding: 18px 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.footer-bg {
+  margin-block: 2rem;
+  grid-column: 1/4;
+  background-color: #f4ba53;
+  text-align: center;
+}
+
+.footer-bg p {
+  padding: 20px;
+}

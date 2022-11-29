@@ -30,15 +30,15 @@
   transition: display 0.3s ease-in-out;
 }
 
-.js .js-accordion dd {
+.js [data-anime="accordion"] dd {
   display: none;
 }
 
-.js .js-accordion .activate::after {
+.js [data-anime="accordion"] .activate::after {
   content: "⤴";
 }
 
-.js .js-accordion .activate + dd {
+.js [data-anime="accordion"] .activate + dd {
   display: block;
   animation: slideDown 0.5s forwards;
 }

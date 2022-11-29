@@ -6,108 +6,142 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animais Fantásticos</title>
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script>document.documentElement.className += " js"</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/107ce2b180.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="header-bg">
-    <nav class="menu js-menu">
-      <ul>
-        <li><a href="#animals">animais</a></li>
-        <li><a href="#faq">faq</a></li>
-        <li><a href="#contact">contato</a></li>
-        <li><a href="">Dev →</a></li>
+  <div class="grid-container">
+    <header class="header-bg">
+      <nav class="menu">
+        <button data-menu="mobile" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul data-anime="smooth" data-menu="list" id="menu">
+          <li><a href="#animals">animais</a></li>
+          <li data-dropdown>
+            <a href="sobre.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="parceiros.html">Parceiros</a></li>
+              <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+          </li>
+          <li><a href="#faq">faq</a></li>
+          <li><a href="#contact">contato</a></li>
+          <li><a href="#" data-modal="open">Login →</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main class="grid-section animals" id="animals" data-anime="scroll">
+      <h1 class="title">animais Fantásticos</h1>
+      <ul class="animals-list js-tabmenu" data-tab="menu">
+        <li><img src="./img/imagem1.jpg" alt=""></li>
+        <li><img src="./img/imagem2.jpg" alt=""></li>
+        <li><img src="./img/imagem3.jpg" alt=""></li>
+        <li><img src="./img/imagem4.jpg" alt=""></li>
+        <li><img src="./img/imagem5.jpg" alt=""></li>
+        <li><img src="./img/imagem6.jpg" alt=""></li>
       </ul>
-    </nav>
+      <div class="animals-info" data-tab="content">
+        <section data-anime="show-right">
+          <h2>raposa</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </section>
 
-  </header>
+        <section data-anime="show-right">
+          <h2>esquilo</h2>
+          <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim, quatipuru, agutipuru ou acutipuru.</p>
+          <p>Na Galiza e em algumas zonas de Portugal, também são conhecido por esquio. Os esquilos estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio.</p>
+        </section>
 
-  <main class="animals grid-section js-scroll" id="animals">
-    <h1 class="title">animais Fantásticos</h1>
-    <ul class="animals-list js-tabmenu">
-      <li><img src="./img/imagem1.jpg" alt=""></li>
-      <li><img src="./img/imagem2.jpg" alt=""></li>
-      <li><img src="./img/imagem3.jpg" alt=""></li>
-      <li><img src="./img/imagem4.jpg" alt=""></li>
-      <li><img src="./img/imagem5.jpg" alt=""></li>
-      <li><img src="./img/imagem6.jpg" alt=""></li>
-    </ul>
-    <div class="animals-info js-tabcontent">
-      <div>
-        <h2>raposa</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        <section data-anime="show-down">
+          <h2>urso</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem itaque amet dolores, sit doloremque a beatae incidunt impedit earum ad!</p>
+        </section>
+
+        <section data-anime="show-down">
+          <h2>lobo</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </section>
+
+        <section data-anime="show-down">
+          <h2>macaco</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </section>
+
+        <section data-anime="show-down">
+          <h2>leão</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </div>
+    </main>
 
-      <div>
-        <h2>esquilo</h2>
-        <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim, quatipuru, agutipuru ou acutipuru.</p>
-        <p>Na Galiza e em algumas zonas de Portugal, também são conhecido por esquio. Os esquilos estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio.</p>
-      </div>
 
-      <div>
-        <h2>urso</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem itaque amet dolores, sit doloremque a beatae incidunt impedit earum ad!</p>
-      </div>
+    <article class="grid-section faq" id="faq" aria-label="FAQ" data-anime="scroll">
+      <h1 class="title">faq</h1>
+      <dl class="faq-list" data-anime="accordion">
+        <dt>Qual é a idade dos animais?</dt>
+        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+        <dt>Eles são fantásticos?</dt>
+        <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
+        <dt>Qual é a diferença?</dt>
+        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+        <dt>Como proteger?</dt>
+        <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
+      </dl>
+    </article>
 
-      <div>
-        <h2>lobo</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-      </div>
+    <article class="grid-section numbers" data-anime="scroll">
+      <h1 class="title">Numbers</h1>
+      <div class="grid-numbers">
 
-      <div>
-        <h2>macaco</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
       </div>
+    </article>
 
-      <div>
-        <h2>leão</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-      </div>
+    <article class="grid-section contact" id="contact" aria-label="contato" data-anime="scroll">
+      <h1 class="title">contato</h1>
+      <img class="map" src="./img/mapa.png" alt="localização mapa" data-tooltip aria-label="Endereço perto da estação arniqueiras">
+      <ul class="contact-list">
+        <li><a href="mailto:contato@origamid.com">contato@origamid.com</a></li>
+        <li><a href="tel:+5521999999999">+55 (21) 9999-9999</a></li>
+        <li>Setor Comercial Sul Quadra 7 BL A </li>
+        <li>Asa sul - Brasília, DF</li>
+        <li>doe<span class="btc-price" data-btc>0</span> Bitcoin para nós ajudar</li>
+        <li data-day="1,2,3,4,5" data-time="8,18">Seg à Sex das 8h às 18h</li>
+      </ul>
+    </article>
+
+    <footer class="footer-bg">
+      <p>Todos os direitos reservados.</p>
+    </footer>
+
+  </div>
+
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button class="close" data-modal="close">X</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <button data-modal="submit">Login</button>
+      </form>
     </div>
+  </section>
 
-  </main>
-
-
-  <article class="faq grid-section js-scroll" id="faq" aria-label="FAQ">
-    <h1 class="title">faq</h1>
-    <dl class="faq-list js-accordion">
-      <dt>Qual é a idade dos animais?</dt>
-      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-      <dt>Eles são fantásticos?</dt>
-      <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
-      <dt>Qual é a diferença?</dt>
-      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-      <dt>Como proteger?</dt>
-      <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
-    </dl>
-  </article>
-
-  <article class="contact grid-section js-scroll" id="contact" aria-label="contato">
-    <h1 class="title">contato</h1>
-    <img class="map" src="./img/mapa.png" alt="localização mapa">
-    <ul class="contact-list">
-      <li><a href="mailto:contato@origamid.com">contato@origamid.com</a></li>
-      <li><a href="tel:+5521999999999">+55 (21) 9999-9999</a></li>
-      <li>Setor Comercial Sul Quadra 7 BL A </li>
-      <li>Asa sul - Brasília, DF</li>
-    </ul>
-  </article>
-
-  <footer class="footer-bg">
-    <p>Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="./js/script.js"></script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>

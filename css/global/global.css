@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  background: #faf6ed;
+  color: #222;
+  font-smooth: antialiased;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.js body.mode {
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.grid-section {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  gap: 30px;
+  margin-block: 2rem;
+  padding: 10px;
+}
+.title {
+  grid-column: 1/-1;
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display SC", georgia;
+  line-height: 1;
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .header-bg,
+  .grid-section,
+  .footer-bg {
+    grid-column: 1 !important;
+  }
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+  }
+  .animals-list {
+    grid-column: 1 !important;
+  }
+  .faq-list,
+  .map,
+  .contact-list {
+    grid-column: 1/-1 !important;
+  }
+  .title {
+    grid-column: 1/4 !important;
+    font-size: 3rem;
+  }
+  .header-bg {
+    margin-top: 0 !important;
+  }
+  .footer-bg {
+    margin-bottom: 0 !important;
+  }
+}

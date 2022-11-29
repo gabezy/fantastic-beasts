@@ -1,0 +1,44 @@
+@keyframes showRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.js [data-tab="content"] section {
+  display: none;
+}
+.js [data-tab="content"] section.activate.show-right {
+  display: block;
+  animation: showRight 0.5s forwards;
+}
+.js [data-tab="content"] section.activate.show-down {
+  display: block;
+  animation: showDown 0.5s forwards;
+}
+
+.js [data-anime="scroll"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 0.3s;
+}
+
+.js [data-anime="scroll"].activate {
+  opacity: 1;
+  transform: translateX(0px);
+}
