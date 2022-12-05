@@ -1,17 +1,19 @@
-export default function initFetchBitcoin() {
-  async function fetchBitcoin(url) {
-    const btcSpan = document.querySelector("[data-btc]");
-
+export default function fetchBitcoin(url, targetElement, amount) {
+  async function fetchBTC() {
+    const btcSpan = document.querySelector(targetElement);
     try {
+      // fecth the bitcoin api a& wait the promisse
+      // to convert to JSON
       const btcResponse = await fetch(url);
       const bitcoim = await btcResponse.json();
+      // get the price in BRL
       const btcPrice = bitcoim.BRL.buy;
-      btcSpan.innerText = (1000 / btcPrice).toFixed(4);
+      // divide the amout by the current BTC price
+      btcSpan.innerText = (amount / btcPrice).toFixed(4);
     } catch (erro) {
       btcSpan.innerText = 0.0103;
       console.log(erro);
     }
   }
-
-  fetchBitcoin("https://blockchain.info/ticker");
+  return fetchBTC();
 }
