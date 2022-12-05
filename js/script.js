@@ -1,3 +1,4 @@
+import ScrollAnimate from "./modules/scroll-animate.js";
 import SmoothScroll from "./modules/smooth-scroll.js";
 import TabNav from "./modules/tab-nav.js";
 import Accordion from "./modules/accordion.js";
@@ -8,13 +9,12 @@ import iniMenuMobile from "./modules/menu-mobile.js";
 import initOpening from "./modules/opening.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
-import initAnimateScroll from "./modules/animate-scroll.js";
+
+const scrollAnimate = new ScrollAnimate("[data-anime='scroll']").init();
 
 const smoothScroll = new SmoothScroll(
   "[data-anime='smooth'] a[href^='#']"
 ).init();
-
-initAnimateScroll();
 
 const tabNav = new TabNav(
   "[data-tab='menu'] li",
