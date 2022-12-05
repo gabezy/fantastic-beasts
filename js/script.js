@@ -1,7 +1,6 @@
 import SmoothScroll from "./modules/smooth-scroll.js";
 import TabNav from "./modules/tab-nav.js";
 import Accordion from "./modules/accordion.js";
-import initZoom from "./modules/zoom.js";
 import Modal from "./modules/modal.js";
 import initToolTip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
@@ -23,8 +22,6 @@ const tabNav = new TabNav(
 ).init();
 
 const accordion = new Accordion("[data-anime='accordion'] dt").init();
-
-initZoom();
 
 const modal = new Modal(
   "[data-modal='open']",

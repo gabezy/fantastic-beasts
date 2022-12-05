@@ -30,7 +30,6 @@ export default class Modal {
   init() {
     if (this.modalOpen && this.modalClose && this.modalContainer) {
       this.addModalEvents();
-      console.log("this");
       return this;
     }
   }
