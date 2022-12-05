@@ -1,22 +1,36 @@
-export default function initModal() {
-  const modalLink = document.querySelector("[data-modal='open']");
-  const modal = document.querySelector("[data-modal='container']");
-  const modalClose = document.querySelector("[data-modal='close']");
+export default class Modal {
+  constructor(btnOpen, btnClose, container) {
+    this.modalOpen = document.querySelector(btnOpen);
+    this.modalClose = document.querySelector(btnClose);
+    this.modalContainer = document.querySelector(container);
+    this.activateClass = "activate";
 
-  if (modalLink && modal && modalClose) {
-    const activate = "activate";
+    // bind this to callback to
+    // reference to the class's object
+    this.eventToggleModal = this.eventToggleModal.bind(this);
+    this.clickToExit = this.clickToExit.bind(this);
+  }
+  toggleModal() {
+    this.modalContainer.classList.toggle(this.activateClass);
+  }
+  eventToggleModal(e) {
+    e.preventDefault();
+    this.toggleModal();
+  }
+  // close the modal when click outside
+  clickToExit(e) {
+    if (e.target === e.currentTarget) this.toggleModal(e);
+  }
+  addModalEvents() {
+    this.modalOpen.addEventListener("click", this.eventToggleModal);
+    this.modalClose.addEventListener("click", this.eventToggleModal);
+    this.modalContainer.addEventListener("click", this.clickToExit);
+  }
 
-    modalLink.addEventListener("click", toggleModal);
-    modalClose.addEventListener("click", toggleModal);
-
-    function toggleModal() {
-      modal.classList.toggle(activate);
-    }
-
-    modal.addEventListener("click", clickToExit);
-
-    function clickToExit(event) {
-      if (event.target === this) toggleModal(event);
+  init() {
+    if (this.modalOpen && this.modalClose && this.modalContainer) {
+      this.addModalEvents();
+      return this;
     }
   }
 }
