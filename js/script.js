@@ -2,7 +2,7 @@ import SmoothScroll from "./modules/smooth-scroll.js";
 import TabNav from "./modules/tab-nav.js";
 import Accordion from "./modules/accordion.js";
 import Modal from "./modules/modal.js";
-import initToolTip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import iniMenuMobile from "./modules/menu-mobile.js";
 import initOpening from "./modules/opening.js";
@@ -29,7 +29,7 @@ const modal = new Modal(
   "[data-modal='container']"
 ).init();
 
-initToolTip();
+const tooltip = new Tooltip("[data-tooltip]", "(min-width: 800px)").init();
 initDropdownMenu();
 iniMenuMobile();
 initOpening();
