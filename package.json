@@ -1,0 +1,26 @@
+{
+  "name": "animais-fantasticos",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabezy/fantastic-beasts.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabezy/fantastic-beasts/issues"
+  },
+  "homepage": "https://github.com/gabezy/fantastic-beasts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "eslint": "^8.29.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}

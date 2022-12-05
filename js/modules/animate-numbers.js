@@ -16,6 +16,9 @@ export default function initAnimateNumbers() {
       }, 25 * Math.random());
     });
   }
+
+  const observer = new MutationObserver(handleMutation);
+
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains("activate")) {
       observer.disconnect();
@@ -24,6 +27,5 @@ export default function initAnimateNumbers() {
   }
 
   const observerTarget = document.querySelector(".numbers");
-  const observer = new MutationObserver(handleMutation);
   observer.observe(observerTarget, { attributes: true });
 }
