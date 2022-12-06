@@ -5,7 +5,7 @@ import Accordion from "./modules/accordion.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import iniMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initOpening from "./modules/opening.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
@@ -30,7 +30,11 @@ const tooltip = new Tooltip("[data-tooltip]", "(min-width: 800px)").init();
 
 const dropdown = new DropdownMenu("[data-dropdown]").init();
 
-iniMenuMobile();
+const menuMobile = new MenuMobile(
+  '[data-menu="mobile"]',
+  '[data-menu="list"]'
+).init();
+
 initOpening();
 
 fetchAnimals("./animais-api.json", ".grid-numbers");
