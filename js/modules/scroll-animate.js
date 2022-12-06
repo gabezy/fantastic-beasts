@@ -1,8 +1,10 @@
+import debounce from "./debounce.js";
+
 export default class ScrollAnimate {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.activateClass = "activate";
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 150);
   }
   // gets the distance between the top of the element
   // and the top of the page and return an object
