@@ -17,7 +17,6 @@ export default class Tooltip {
     } else {
       this.tooltipBox.style.left = `${e.pageX + 30}px`;
     }
-    console.log(e.pageX, window.innerWidth);
   }
   onMouseLeave({ currentTarget }) {
     this.tooltipBox.remove();
